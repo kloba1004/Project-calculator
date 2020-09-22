@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h3>Calculator by Ante</h3>
+    
+    <div class="calculator">
+        <div class="display"><p></p></div>
+
+        <div class="container">
+            <button class="special-buttons" id="delete">AC</button>
+            <button class="special-buttons" id="backspace">DEL</button>
+            <button class="special-buttons" id="sign">+/-</button>  
+            <button class="operator" id="divide">/</button>
+            <button data-key="7" class="number">7</button>
+            <button data-key="8" class="number">8</button>
+            <button data-key="9" class="number">9</button>
+            <button class="operator" id="multiply">*</button>
+            <button data-key="4" class="number">4</button>
+            <button data-key="5" class="number">5</button>
+            <button data-key="5" class="number">6</button>
+            <button class="operator" id="subtract">-</button>
+            <button data-key="1" class="number">1</button>
+            <button data-key="2" class="number">2</button>
+            <button data-key="3" class="number">3</button>
+            <button class="operator" id="add">+</button>
+            <button data-key="0" class="number" id="zero">0</button>
+            <button id="floating-point">.</button>
+            <button id="equals">=</button>
+        </div>
+    </div>
+
+    <p id="disclaimer"><strong>Disclaimer</strong>: This calculator can execute mathematical operations with numbers up to 999 999. If a resulting number is expected to be greater than that, 'ERROR' message will be displayed. </p>
+   <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
