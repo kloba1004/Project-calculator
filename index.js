@@ -72,7 +72,7 @@ display.textContent = '0';
 
 buttons.forEach(button => button.addEventListener('click', (e) => {
     
-    if (e.target.id == 'sign') {
+    if (e.target.id == 'sign' && display.textContent.length<9) {
          if (!display.textContent.includes('-')) {
              display.textContent = '-'.concat(display.textContent);
          } else display.textContent = display.textContent.substr(1);
