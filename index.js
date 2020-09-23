@@ -16,7 +16,7 @@ function add(a,b) {
         sum = sum.substr(0,9);
         sum = Number(sum);
     } else sum = Number(sum);
-    return sum < 1000000 ? sum : 'ERROR';
+    return Math.abs(sum) < 1000000 ? sum : 'ERROR';
 }
 
 function subtract(a,b) {
@@ -30,7 +30,7 @@ function subtract(a,b) {
         subtraction = subtraction.substr(0,9);
         subtraction = Number(subtraction);
     } else subtraction = Number(subtraction);
-    return subtraction < 1000000 ? subtraction : 'ERROR';
+    return Math.abs(subtraction) < 1000000 ? subtraction : 'ERROR';
 }
 
 function multiply(a,b) {
@@ -44,7 +44,7 @@ function multiply(a,b) {
         product = product.substr(0,9);
         product = Number(product);
     } else product = Number(product);
-    return product < 1000000 ? product : 'ERROR';
+    return Math.abs(product) < 1000000 ? product : 'ERROR';
 }
 
 function divide(a,b) {
@@ -58,7 +58,7 @@ function divide(a,b) {
         division = division.substr(0,9);
         division = Number(division);
     } else division = Number(division);
-    return (b !== 0 && division < 1000000) ? division : 'ERROR';
+    return (b !== 0 && Math.abs(division) < 1000000) ? division : 'ERROR';
 }
 
 function operate(operator,firstNumber,secondNumber) {
@@ -72,7 +72,7 @@ display.textContent = '0';
 
 buttons.forEach(button => button.addEventListener('click', (e) => {
     
-    if (e.target.id == 'sign' && display.textContent.length<9) {
+    if (e.target.id == 'sign' && display.textContent.length<9 && display.textContent !== '0') {
          if (!display.textContent.includes('-')) {
              display.textContent = '-'.concat(display.textContent);
          } else display.textContent = display.textContent.substr(1);
